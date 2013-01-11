@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="RJ-DV-010" name="br.com.codigo.b.YouK" tests="2" failures="0" timestamp="11 Jan 2013 12:25:38 GMT" time="3.918" errors="0">
+  <testcase name="testYoukPasswordLock" time="3.856" classname="br.com.codigo.b.YouK"/>
+  <testcase name="testTitleError" time="0.056" classname="br.com.codigo.b.YouK"/>
+</testsuite>

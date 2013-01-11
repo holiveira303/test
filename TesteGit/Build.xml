@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<project name="TesteGit" default="dist" basedir=".">
+    <description>
+        simple example build file
+    </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="dist"  location="dist"/>
+  <property name="lib"  location="lib"/>
+	
+  <!-- set global properties for this test -->
+  <property name="test.class.name" value="br.com.codigo.b.YouK" />
+	
+	
+  <path id="test.classpath">
+	<pathelement location="${build}" />
+	<!--<pathelement location="${lib}/testng-6.8.jar" /> -->
+  	
+	<fileset dir="lib">
+	  <include name="*.jar"/>
+	</fileset>
+  </path>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}">
+    	<classpath>  
+    	  	 	<fileset dir="${lib}" >  
+    	  	    	<include name="*.jar"/>  
+    			</fileset>  
+      	 </classpath>
+    </javac>
+  	  	   
+  </target>
+
+  <target name="dist" depends="compile"
+        description="generate the distribution" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    <jar jarfile="${dist}/lib/TesteGit-${DSTAMP}.jar" basedir="${build}"/>
+  </target>
+
+  <target name="clean" depends="compile"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+	
+	<!-- -->
+	<target name="ykTest">		
+		<antcall target="reports">
+			<param name="projecttest.suite.location" value="TesteGit/suites/"/>
+			<param name="projecttest.suite" value="testng.xml"/>
+			<param name="projecttest.infra" value="true"/>
+		</antcall>
+	</target>
+	
+	<target name="reports" depends="testee">
+		<junitreport todir="test-report">
+			<fileset dir="test-report">
+				<include name="*/*.xml"/>
+			</fileset>
+			<report format="noframes" todir="${build}/test-report"/>
+		</junitreport>
+	</target>
+
+	<target name="testee" depends="compile" description="Run the tests">
+			
+		<taskdef classpathref="test.classpath" resource="testngtasks" />		 		
+		
+		<testng outputdir="test-report" classpathref="test.classpath" >
+			<xmlfileset dir="../${projecttest.suite.location}/" includes="${projecttest.suite}"/> 
+			<!-- <xmlfileset dir="suites/" includes="testng.xml"/> -->
+
+		</testng>
+
+	</target>
+	
+	<!-- -->
+</project>

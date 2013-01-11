@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testngy]" parallel="false">
+  <test name="LoginSuccess(failed)">
+    <groups>
+      <run>
+        <include name="LoginOk"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="br.com.codigo.b.YouOk">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testYoukPasswordOk"/>
+          <include name="testTitleOk"/>
+          <include name="setUp"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

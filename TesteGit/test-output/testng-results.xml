@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8555" started-at="2013-01-11T16:47:11Z" finished-at="2013-01-11T16:47:20Z">
+    <groups>
+      <group name="LoginOk">
+        <method signature="YouOk.level2()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="level2" class="br.com.codigo.b.YouOk"/>
+        <method signature="YouOk.level3()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="level3" class="br.com.codigo.b.YouOk"/>
+        <method signature="YouOk.level0()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="level0" class="br.com.codigo.b.YouOk"/>
+        <method signature="YouOk.testYoukPasswordOk()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="testYoukPasswordOk" class="br.com.codigo.b.YouOk"/>
+        <method signature="YouOk.testTitleOk()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="testTitleOk" class="br.com.codigo.b.YouOk"/>
+      </group> <!-- LoginOk -->
+    </groups>
+    <test name="Default test" duration-ms="8555" started-at="2013-01-11T16:47:11Z" finished-at="2013-01-11T16:47:20Z">
+      <class name="br.com.codigo.b.YouOk">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="setUp" is-config="true" duration-ms="10947" started-at="2013-01-11T14:47:00Z" finished-at="2013-01-11T14:47:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testYoukPasswordOk()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="testYoukPasswordOk" duration-ms="8509" started-at="2013-01-11T14:47:11Z" finished-at="2013-01-11T14:47:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testYoukPasswordOk -->
+        <test-method status="PASS" signature="level3()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="level3" duration-ms="6" started-at="2013-01-11T14:47:20Z" finished-at="2013-01-11T14:47:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- level3 -->
+        <test-method status="PASS" signature="level2()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="level2" duration-ms="1" started-at="2013-01-11T14:47:20Z" finished-at="2013-01-11T14:47:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- level2 -->
+        <test-method status="PASS" signature="testTitleOk()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="testTitleOk" duration-ms="27" started-at="2013-01-11T14:47:20Z" depends-on-methods="br.com.codigo.b.YouOk.testYoukPasswordOk" finished-at="2013-01-11T14:47:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTitleOk -->
+        <test-method status="PASS" signature="level0()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="level0" duration-ms="1" started-at="2013-01-11T14:47:20Z" depends-on-methods="br.com.codigo.b.YouOk.level2, br.com.codigo.b.YouOk.level3" finished-at="2013-01-11T14:47:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- level0 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:br.com.codigo.b.YouOk@13d93f4]" name="tearDown" is-config="true" duration-ms="192" started-at="2013-01-11T14:47:20Z" finished-at="2013-01-11T14:47:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- br.com.codigo.b.YouOk -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
